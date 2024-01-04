@@ -8,16 +8,11 @@
 html {
   scroll-behavior: smooth;
 }
+/*********** Home ***********/
 .Home{
   padding-top: 100px;
   margin-top:70px;
-  /* background-image: url('https://plus.unsplash.com/premium_photo-1673278063834-c982ebab2e75?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-  /* background: radial-gradient(#8eecf5,#cfbaf0,#a3c4f3,#90dbf4); */
-  /* background-image: url('https://www.pixground.com/wp-content/uploads/2023/05/Blue-Abstract-Gradient-Digital-Art-4K-Wallpaper.jpg'); */
-/* background-image: url("https://wallpapers.com/images/hd/low-poly-blue-background-5o6wzulr6o47bk0a.jpg"); */
-background-image: url("https://cdn.wallpapersafari.com/34/73/ZKY4rG.jpg");
-/* background-image: url("https://img.freepik.com/premium-photo/light-blue-background-hd-wallpaper-3d-geometric-pattern_1000823-2294.jpg"); */
-
+  background-image: url("https://cdn.wallpapersafari.com/34/73/ZKY4rG.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,20 +21,20 @@ background-image: url("https://cdn.wallpapersafari.com/34/73/ZKY4rG.jpg");
   line-height: 1.9;
   padding-bottom: 10px;
 }
-
 .Home h4 span {
   color: #072ac8;
-
 }
 .Home h4 .UXBracket {
 font-style: italic;
 } 
-
+.Home .Intro{
+  padding-left: 100px;
+  padding-right: 100px;
+ margin-top: 20px;
+}
 .flex{
   display: flex;
-  
 }
-
 .ProfileImage >img {
   display: block;
   margin-left: auto;
@@ -47,7 +42,6 @@ font-style: italic;
   max-width: 10%;
   max-height: 1%;
   border-radius: 2% 20% 2% 20%;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
 }
 
 /*********** About_me ***********/
@@ -59,15 +53,12 @@ font-style: italic;
   margin-top:50px;
   line-height: 1.7;
   background-image: url('https://static.vecteezy.com/system/resources/previews/004/243/021/original/abstract-template-background-white-and-bright-blue-squares-overlapping-with-halftone-and-texture-free-vector.jpg');
-
-  /* background-image: url('https://images5.alphacoders.com/132/1323475.png'); */
-  /* background-image: url("https://images3.alphacoders.com/132/1323474.png"); */
-  /* background-image: url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;}
-  .AboutMe .ULtag{
+  background-size: cover;
+}
+.AboutMe .ULtag{
   list-style-type: none;
 }
 
@@ -80,6 +71,7 @@ font-style: italic;
   left: 0;
   width: 100%;
   gap: 60px;
+  z-index: 2;
   padding: 15px;
   font-size: 1.3em;
   background: rgba(235, 223, 255, 0.173);
@@ -103,6 +95,18 @@ font-style: italic;
   background-color: transparent;
   text-decoration: underline;
 }
+.light-theme .Nav a {
+  color: #072ac8;
+}
+.dark-theme .Nav a {
+  color: #0096c7/* Your dark theme font color */;
+}
+.dark-theme .Nav  a:hover {
+  color:  #90e0ef;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 /*********** Certifications ***********/
 .Certifications{
   padding:20px;
@@ -117,12 +121,9 @@ font-style: italic;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .Certifications .ULtag {
-  margin-left: 20px;
   text-align: start;
   list-style-type: none;
-  
 }
 .Certifications b{
   font-size: medium;
@@ -133,25 +134,34 @@ font-style: italic;
 .Education{
 line-height: 0.7;
 }
+.Education h2{
+  padding: 15px;
+}
+
 /*********** Work Exp ***********/
 .WorkExp{
   line-height: 1;
+}
+.WorkExp h2{
+  padding: 15px;
 }
 .WorkExp h5{
   font-size: medium;
 }
 .WorkExp p{
   font-size: 0.3 rem;
+  line-height: 1.5;
 }
-.WorkExp .WorkExpContent h4, h5{
-  line-height: 0.1;
+.WorkExp .WorkExpContent h4{
+  line-height: 0.5;
   margin-left: 20px;
- font-weight: bolder;
+  font-weight: bolder; 
 }
 .WorkExpContent{
   color: #072ac8;
 }
 
+/*********** Button ***********/
 .button {
   all: unset;
   width: 100px;
@@ -159,7 +169,6 @@ line-height: 0.7;
   font-size: 16px;
   background: transparent;
   border: none;
-  /* position: relative; */
   position: relative;
   top: 50%;
   left: 50%;
@@ -223,6 +232,7 @@ line-height: 0.7;
   transition: 0s;
   transform: translate(0, 5%);
 }
+
 
 /*********** Contactme ***********/
 
@@ -293,11 +303,29 @@ line-height: 0.7;
   text-decoration: underline;
 }
 
+/*********** Theme ***********/
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+}
+
+.App .toggle-button {
+  position: absolute;
+  top: 70px;
+}
+/*********** Media tags ***********/
 
   @media (max-width: 600px) {
     #root {
       max-width: 100%; /* Adjust the maximum width as needed for small screens */
       padding: 1rem; /* Adjust the padding for small screens */
+    }
+    .Home {
+      background-size: cover;
     }
     .Nav {
       display: flex;
@@ -328,6 +356,7 @@ line-height: 0.7;
   }
   .AboutMe{
     line-height: 1 em;
+    background-size: cover;
   }
   .Education article{
     line-height:  1.2em ;
@@ -337,10 +366,17 @@ line-height: 0.7;
   }
  .Certifications{
   line-height: 1 em;
+  background-size: 100% 100%;
  }
  .Certifications b{
   font-size: small;
   text-align:left ;
+ }
+ .Projects{
+  background-size: cover;
+ }
+ .Contactme{
+  background-size: cover;
  }
 
  .ProfileImage >img {
@@ -423,13 +459,4 @@ line-height: 0.7;
   transition: 0s;
   transform: translate(0, 5%);
 }
-
-  }
-
-
-
-
-
-
-
-
+}
